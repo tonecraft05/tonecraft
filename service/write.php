@@ -6,7 +6,7 @@
 // Email configuration
 $email_to = "tonecraft05@gmail.com";
 $email_from = "tonecraft05@gmail.com";
-$email_password = "qpbx qakf uhjv cqtj";
+$email_password = "gujk vrul yuhf bdqp";
 $email_subject = "ToneCraft Results - New Participant";
 
 // Load PHPMailer
@@ -61,12 +61,18 @@ if(version_compare(PHP_VERSION, '8.0.0', '<') and get_magic_quotes_gpc()){
 
 $session = json_decode($sessionParam);
 
-$filepathPrefix = "C:/Aarush/webMUSHRA/results/".sanitize($string = $session->testId, $is_filename =FALSE)."/";
+// Use relative path - works on both local and Render
+$resultsBase = __DIR__ . '/../results/';
+$filepathPrefix = $resultsBase . sanitize($string = $session->testId, $is_filename = FALSE) . "/";
 $filepathPostfix = ".csv";
 
-if (!is_dir($filepathPrefix)) {
-    mkdir($filepathPrefix);
+if (!is_dir($resultsBase)) {
+    mkdir($resultsBase, 0777, true);
 }
+if (!is_dir($filepathPrefix)) {
+    mkdir($filepathPrefix, 0777, true);
+}
+
 $length = isset($session->participant->name) ? count($session->participant->name) : 0;
 
 // mushra
@@ -74,7 +80,7 @@ $write_mushra = false;
 $mushraCsvData = array();
 
 $input = array("session_test_id");
-for($i =0; $i < $length; $i++){
+for($i = 0; $i < $length; $i++){
     array_push($input, $session->participant->name[$i]);
 }
 array_push($input, "session_uuid", "trial_id", "rating_stimulus", "rating_score", "rating_time", "rating_comment");
@@ -85,7 +91,7 @@ foreach ($session->trials as $trial) {
     $write_mushra = true;
     foreach ($trial->responses as $response) {
         $results = array($session->testId);
-        for($i =0; $i < $length; $i++){
+        for($i = 0; $i < $length; $i++){
             array_push($results, $session->participant->response[$i]);
         }
         array_push($results, $session->uuid, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment);
@@ -95,19 +101,22 @@ foreach ($session->trials as $trial) {
 }
 
 if ($write_mushra) {
-    $filename = $filepathPrefix."mushra".$filepathPostfix;
+    // Try to save CSV (may fail on Render due to ephemeral filesystem)
+    $filename = $filepathPrefix . "mushra" . $filepathPostfix;
     $isFile = is_file($filename);
-    $fp = fopen($filename, 'a');
-    foreach ($mushraCsvData as $row) {
-        if ($isFile) {
-            $isFile = false;
-        } else {
-            fputcsv($fp, $row);
+    $fp = @fopen($filename, 'a');
+    if ($fp) {
+        foreach ($mushraCsvData as $row) {
+            if ($isFile) {
+                $isFile = false;
+            } else {
+                fputcsv($fp, $row);
+            }
         }
+        fclose($fp);
     }
-    fclose($fp);
 
-    // Send email
+    // Always send email regardless of file save
     global $email_to, $email_from, $email_password, $email_subject;
     $email_body = "New ToneCraft participant submission!\n\n";
     $email_body .= "UUID: " . $session->uuid . "\n";
@@ -117,146 +126,5 @@ if ($write_mushra) {
         $email_body .= implode(",", $row) . "\n";
     }
     send_email_phpmailer($email_to, $email_from, $email_password, $email_subject, $email_body);
-}
-
-// paired comparison
-$write_pc = false;
-$pcCsvData = array();
-$input = array("session_test_id");
-for($i =0; $i < $length; $i++){
-    array_push($input, $session->participant->name[$i]);
-}
-array_push($input, "trial_id", "choice_reference", "choice_non_reference", "choice_answer", "choice_time", "choice_comment");
-array_push($pcCsvData, $input);
-foreach ($session->trials as $trial) {
-  if ($trial->type == "paired_comparison") {
-      foreach ($trial->responses as $response) {
-          $write_pc = true;
-          $results = array($session->testId);
-          for($i =0; $i < $length; $i++){
-              array_push($results, $session->participant->response[$i]);
-          }
-          array_push($results, $trial->id, $response->reference, $response->nonReference, $response->answer, $response->time, $response->comment);
-          array_push($pcCsvData, $results);
-      }
-  }
-}
-if ($write_pc) {
-    $filename = $filepathPrefix."paired_comparison".$filepathPostfix;
-    $isFile = is_file($filename);
-    $fp = fopen($filename, 'a');
-    foreach ($pcCsvData as $row) {
-        if ($isFile) { $isFile = false; } else { fputcsv($fp, $row); }
-    }
-    fclose($fp);
-}
-
-// bs1116
-$write_bs1116 = false;
-$bs1116CsvData = array();
-$input = array("session_test_id");
-for($i =0; $i < $length; $i++){
-    array_push($input, $session->participant->name[$i]);
-}
-array_push($input, "trial_id", "rating_reference", "rating_non_reference", "rating_reference_score", "rating_non_reference_score", "rating_time", "choice_comment");
-array_push($bs1116CsvData, $input);
-foreach ($session->trials as $trial) {
-  if ($trial->type == "bs1116") {
-      foreach ($trial->responses as $response) {
-          $write_bs1116 = true;
-          $results = array($session->testId);
-          for($i =0; $i < $length; $i++){
-              array_push($results, $session->participant->response[$i]);
-          }
-          array_push($results, $trial->id, $response->reference, $response->nonReference, $response->referenceScore, $response->nonReferenceScore, $response->time, $response->comment);
-          array_push($bs1116CsvData, $results);
-      }
-  }
-}
-if ($write_bs1116) {
-    $filename = $filepathPrefix."bs1116".$filepathPostfix;
-    $isFile = is_file($filename);
-    $fp = fopen($filename, 'a');
-    foreach ($bs1116CsvData as $row) {
-        if ($isFile) { $isFile = false; } else { fputcsv($fp, $row); }
-    }
-    fclose($fp);
-}
-
-// lms
-$write_lms = false;
-$lmsCSVdata = array();
-$input = array("session_test_id");
-for($i =0; $i < $length; $i++){
-    array_push($input, $session->participant->name[$i]);
-}
-array_push($input, "trial_id", "stimuli_rating", "stimuli", "rating_time");
-array_push($lmsCSVdata, $input);
-foreach($session->trials as $trial) {
-    if($trial->type == "likert_multi_stimulus") {
-        foreach ($trial->responses as $response) {
-            $write_lms = true;
-            $results = array($session->testId);
-            for($i =0; $i < $length; $i++){
-                array_push($results, $session->participant->response[$i]);
-            }
-            array_push($results, $trial->id, " $response->stimulusRating ", $response->stimulus, $response->time);
-            array_push($lmsCSVdata, $results);
-        }
-    }
-}
-if($write_lms){
-    $filename = $filepathPrefix."lms".$filepathPostfix;
-    $isFile = is_file($filename);
-    $fp = fopen($filename, 'a');
-    foreach($lmsCSVdata as $row){
-        if ($isFile){ $isFile = false; } else { fputcsv($fp,$row); }
-    }
-    fclose($fp);
-}
-
-// lss
-$write_lss = false;
-$lssCSVdata = array();
-$input = array("session_test_id");
-for($i =0; $i < $length; $i++){
-    array_push($input, $session->participant->name[$i]);
-}
-array_push($input, "trial_id");
-$ratingCount = isset($session->trials[0]->responses[0]->stimulusRating) ? count($session->trials[0]->responses[0]->stimulusRating) : 0;
-if($ratingCount > 1) {
-    for($i =0; $i < $ratingCount; $i++){
-        array_push($input, "stimuli_rating" . ($i+1));
-    }
-} else {
-    array_push($input, "stimuli_rating");
-}
-array_push($input, "stimuli", "rating_time");
-array_push($lssCSVdata, $input);
-foreach($session->trials as $trial) {
-    if($trial->type == "likert_single_stimulus") {
-        foreach ($trial->responses as $response) {
-            $write_lss = true;
-            $results = array($session->testId);
-            for($i =0; $i < $length; $i++){
-                array_push($results, $session->participant->response[$i]);
-            }
-            array_push($results, $trial->id);
-            if(isset($response->stimulusRating)) {
-                $results = array_merge($results, (array)$response->stimulusRating);
-            }
-            array_push($results, $response->stimulus, $response->time);
-            array_push($lssCSVdata, $results);
-        }
-    }
-}
-if($write_lss){
-    $filename = $filepathPrefix."lss".$filepathPostfix;
-    $isFile = is_file($filename);
-    $fp = fopen($filename, 'a');
-    foreach($lssCSVdata as $row){
-        if ($isFile){ $isFile = false; } else { fputcsv($fp,$row); }
-    }
-    fclose($fp);
 }
 ?>
