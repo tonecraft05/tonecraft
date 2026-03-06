@@ -1,9 +1,9 @@
 RewriteEngine On
-
-# Handle config requests without .yaml extension
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^configs/([^.]+)$ /configs/$1.yaml [L]
-
-# Route write.php through service folder
-RewriteRule ^service/write\.php$ /service/write.php [L]
+RewriteCond %{REQUEST_URI} !^/service/
+RewriteCond %{REQUEST_URI} !^/configs/
+RewriteCond %{REQUEST_URI} !^/vendor/
+RewriteCond %{REQUEST_URI} !^/lib/
+RewriteCond %{REQUEST_URI} !^/design/
+RewriteRule ^ index.html [L]
