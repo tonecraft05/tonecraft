@@ -1,9 +1,5 @@
 RewriteEngine On
+
+# Add .yaml extension for config requests
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !^/service/
-RewriteCond %{REQUEST_URI} !^/configs/
-RewriteCond %{REQUEST_URI} !^/vendor/
-RewriteCond %{REQUEST_URI} !^/lib/
-RewriteCond %{REQUEST_URI} !^/design/
-RewriteRule ^ index.html [L]
+RewriteRule ^configs/([^.]+)$ configs/$1.yaml [L]
