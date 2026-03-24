@@ -1,0 +1,1371 @@
+testname: "ToneCraft"
+testId: tonecraft_ab_test
+bufferSize: 2048
+stopOnErrors: false
+showWaveform: false
+enableLooping: true
+randomize: false
+remoteService: service/write.php
+
+pages:
+
+  - type: generic
+    id: welcome
+    name: "Welcome to ToneCraft Listening Test"
+    content: >
+      <p>Thank you for participating in this listening test.</p>
+
+      <p>In each trial, you will hear a <strong>Reference</strong> guitar tone followed by two 
+      audio samples, <strong>A</strong> and <strong>B</strong>.</p>
+
+      <p>Your task is to evaluate how closely each sample matches the Reference tone 
+      by moving the sliders:</p>
+
+      <ul>
+        <li>Move the slider <strong>higher</strong> (towards 100) if the sample sounds <strong>close</strong> to the Reference.</li>
+        <li>Move the slider <strong>lower</strong> (towards 0) if the sample sounds <strong>different</strong> from the Reference.</li>
+      </ul>
+
+      <p><strong>Instructions:</strong></p>
+      <ul>
+        <li>Listen to the Reference first, then compare A and B.</li>
+        <li>You may listen to each sample as many times as you like.</li>
+        <li>Rate both A and B before moving to the next trial.</li>
+        <li>There are no right or wrong answers - trust your ears.</li>
+      </ul>
+
+      <p>Please use headphones for the best experience.</p>
+
+  - type: mushra
+    id: trial_001
+    name: "Trial 1"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/001_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/001_A.wav
+      B: configs/audio/001_B.wav
+
+  - type: mushra
+    id: trial_002
+    name: "Trial 2"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/002_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/002_A.wav
+      B: configs/audio/002_B.wav
+
+  - type: mushra
+    id: trial_003
+    name: "Trial 3"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/003_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/003_A.wav
+      B: configs/audio/003_B.wav
+
+  - type: mushra
+    id: trial_004
+    name: "Trial 4"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/004_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/004_A.wav
+      B: configs/audio/004_B.wav
+
+  - type: mushra
+    id: trial_005
+    name: "Trial 5"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/005_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/005_A.wav
+      B: configs/audio/005_B.wav
+
+  - type: mushra
+    id: trial_006
+    name: "Trial 6"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/006_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/006_A.wav
+      B: configs/audio/006_B.wav
+
+  - type: mushra
+    id: trial_007
+    name: "Trial 7"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/007_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/007_A.wav
+      B: configs/audio/007_B.wav
+
+  - type: mushra
+    id: trial_008
+    name: "Trial 8"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/008_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/008_A.wav
+      B: configs/audio/008_B.wav
+
+  - type: mushra
+    id: trial_009
+    name: "Trial 9"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/009_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/009_A.wav
+      B: configs/audio/009_B.wav
+
+  - type: mushra
+    id: trial_010
+    name: "Trial 10"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/010_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/010_A.wav
+      B: configs/audio/010_B.wav
+
+  - type: mushra
+    id: trial_011
+    name: "Trial 11"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/011_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/011_A.wav
+      B: configs/audio/011_B.wav
+
+  - type: mushra
+    id: trial_012
+    name: "Trial 12"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/012_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/012_A.wav
+      B: configs/audio/012_B.wav
+
+  - type: mushra
+    id: trial_013
+    name: "Trial 13"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/013_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/013_A.wav
+      B: configs/audio/013_B.wav
+
+  - type: mushra
+    id: trial_014
+    name: "Trial 14"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/014_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/014_A.wav
+      B: configs/audio/014_B.wav
+
+  - type: mushra
+    id: trial_015
+    name: "Trial 15"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/015_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/015_A.wav
+      B: configs/audio/015_B.wav
+
+  - type: mushra
+    id: trial_016
+    name: "Trial 16"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/016_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/016_A.wav
+      B: configs/audio/016_B.wav
+
+  - type: mushra
+    id: trial_017
+    name: "Trial 17"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/017_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/017_A.wav
+      B: configs/audio/017_B.wav
+
+  - type: mushra
+    id: trial_018
+    name: "Trial 18"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/018_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/018_A.wav
+      B: configs/audio/018_B.wav
+
+  - type: mushra
+    id: trial_019
+    name: "Trial 19"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/019_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/019_A.wav
+      B: configs/audio/019_B.wav
+
+  - type: mushra
+    id: trial_020
+    name: "Trial 20"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/020_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/020_A.wav
+      B: configs/audio/020_B.wav
+
+  - type: mushra
+    id: trial_021
+    name: "Trial 21"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/021_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/021_A.wav
+      B: configs/audio/021_B.wav
+
+  - type: mushra
+    id: trial_022
+    name: "Trial 22"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/022_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/022_A.wav
+      B: configs/audio/022_B.wav
+
+  - type: mushra
+    id: trial_023
+    name: "Trial 23"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/023_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/023_A.wav
+      B: configs/audio/023_B.wav
+
+  - type: mushra
+    id: trial_024
+    name: "Trial 24"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/024_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/024_A.wav
+      B: configs/audio/024_B.wav
+
+  - type: mushra
+    id: trial_025
+    name: "Trial 25"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/025_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/025_A.wav
+      B: configs/audio/025_B.wav
+
+  - type: mushra
+    id: trial_026
+    name: "Trial 26"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/026_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/026_A.wav
+      B: configs/audio/026_B.wav
+
+  - type: mushra
+    id: trial_027
+    name: "Trial 27"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/027_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/027_A.wav
+      B: configs/audio/027_B.wav
+
+  - type: mushra
+    id: trial_028
+    name: "Trial 28"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/028_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/028_A.wav
+      B: configs/audio/028_B.wav
+
+  - type: mushra
+    id: trial_029
+    name: "Trial 29"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/029_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/029_A.wav
+      B: configs/audio/029_B.wav
+
+  - type: mushra
+    id: trial_030
+    name: "Trial 30"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/030_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/030_A.wav
+      B: configs/audio/030_B.wav
+
+  - type: mushra
+    id: trial_031
+    name: "Trial 31"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/031_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/031_A.wav
+      B: configs/audio/031_B.wav
+
+  - type: mushra
+    id: trial_032
+    name: "Trial 32"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/032_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/032_A.wav
+      B: configs/audio/032_B.wav
+
+  - type: mushra
+    id: trial_033
+    name: "Trial 33"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/033_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/033_A.wav
+      B: configs/audio/033_B.wav
+
+  - type: mushra
+    id: trial_034
+    name: "Trial 34"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/034_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/034_A.wav
+      B: configs/audio/034_B.wav
+
+  - type: mushra
+    id: trial_035
+    name: "Trial 35"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/035_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/035_A.wav
+      B: configs/audio/035_B.wav
+
+  - type: mushra
+    id: trial_036
+    name: "Trial 36"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/036_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/036_A.wav
+      B: configs/audio/036_B.wav
+
+  - type: mushra
+    id: trial_037
+    name: "Trial 37"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/037_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/037_A.wav
+      B: configs/audio/037_B.wav
+
+  - type: mushra
+    id: trial_038
+    name: "Trial 38"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/038_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/038_A.wav
+      B: configs/audio/038_B.wav
+
+  - type: mushra
+    id: trial_039
+    name: "Trial 39"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/039_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/039_A.wav
+      B: configs/audio/039_B.wav
+
+  - type: mushra
+    id: trial_040
+    name: "Trial 40"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/040_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/040_A.wav
+      B: configs/audio/040_B.wav
+
+  - type: mushra
+    id: trial_041
+    name: "Trial 41"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/041_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/041_A.wav
+      B: configs/audio/041_B.wav
+
+  - type: mushra
+    id: trial_042
+    name: "Trial 42"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/042_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/042_A.wav
+      B: configs/audio/042_B.wav
+
+  - type: mushra
+    id: trial_043
+    name: "Trial 43"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/043_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/043_A.wav
+      B: configs/audio/043_B.wav
+
+  - type: mushra
+    id: trial_044
+    name: "Trial 44"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/044_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/044_A.wav
+      B: configs/audio/044_B.wav
+
+  - type: mushra
+    id: trial_045
+    name: "Trial 45"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/045_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/045_A.wav
+      B: configs/audio/045_B.wav
+
+  - type: mushra
+    id: trial_046
+    name: "Trial 46"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/046_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/046_A.wav
+      B: configs/audio/046_B.wav
+
+  - type: mushra
+    id: trial_047
+    name: "Trial 47"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/047_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/047_A.wav
+      B: configs/audio/047_B.wav
+
+  - type: mushra
+    id: trial_048
+    name: "Trial 48"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/048_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/048_A.wav
+      B: configs/audio/048_B.wav
+
+  - type: mushra
+    id: trial_049
+    name: "Trial 49"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/049_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/049_A.wav
+      B: configs/audio/049_B.wav
+
+  - type: mushra
+    id: trial_050
+    name: "Trial 50"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/050_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/050_A.wav
+      B: configs/audio/050_B.wav
+
+  - type: mushra
+    id: trial_051
+    name: "Trial 51"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/051_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/051_A.wav
+      B: configs/audio/051_B.wav
+
+  - type: mushra
+    id: trial_052
+    name: "Trial 52"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/052_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/052_A.wav
+      B: configs/audio/052_B.wav
+
+  - type: mushra
+    id: trial_053
+    name: "Trial 53"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/053_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/053_A.wav
+      B: configs/audio/053_B.wav
+
+  - type: mushra
+    id: trial_054
+    name: "Trial 54"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/054_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/054_A.wav
+      B: configs/audio/054_B.wav
+
+  - type: mushra
+    id: trial_055
+    name: "Trial 55"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/055_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/055_A.wav
+      B: configs/audio/055_B.wav
+
+  - type: mushra
+    id: trial_056
+    name: "Trial 56"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/056_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/056_A.wav
+      B: configs/audio/056_B.wav
+
+  - type: mushra
+    id: trial_057
+    name: "Trial 57"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/057_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/057_A.wav
+      B: configs/audio/057_B.wav
+
+  - type: mushra
+    id: trial_058
+    name: "Trial 58"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/058_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/058_A.wav
+      B: configs/audio/058_B.wav
+
+  - type: mushra
+    id: trial_059
+    name: "Trial 59"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/059_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/059_A.wav
+      B: configs/audio/059_B.wav
+
+  - type: mushra
+    id: trial_060
+    name: "Trial 60"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/060_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/060_A.wav
+      B: configs/audio/060_B.wav
+
+  - type: mushra
+    id: trial_061
+    name: "Trial 61"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/061_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/061_A.wav
+      B: configs/audio/061_B.wav
+
+  - type: mushra
+    id: trial_062
+    name: "Trial 62"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/062_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/062_A.wav
+      B: configs/audio/062_B.wav
+
+  - type: mushra
+    id: trial_063
+    name: "Trial 63"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/063_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/063_A.wav
+      B: configs/audio/063_B.wav
+
+  - type: mushra
+    id: trial_064
+    name: "Trial 64"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/064_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/064_A.wav
+      B: configs/audio/064_B.wav
+
+  - type: mushra
+    id: trial_065
+    name: "Trial 65"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/065_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/065_A.wav
+      B: configs/audio/065_B.wav
+
+  - type: mushra
+    id: trial_066
+    name: "Trial 66"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/066_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/066_A.wav
+      B: configs/audio/066_B.wav
+
+  - type: mushra
+    id: trial_067
+    name: "Trial 67"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/067_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/067_A.wav
+      B: configs/audio/067_B.wav
+
+  - type: mushra
+    id: trial_068
+    name: "Trial 68"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/068_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/068_A.wav
+      B: configs/audio/068_B.wav
+
+  - type: mushra
+    id: trial_069
+    name: "Trial 69"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/069_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/069_A.wav
+      B: configs/audio/069_B.wav
+
+  - type: mushra
+    id: trial_070
+    name: "Trial 70"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/070_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/070_A.wav
+      B: configs/audio/070_B.wav
+
+  - type: mushra
+    id: trial_071
+    name: "Trial 71"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/071_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/071_A.wav
+      B: configs/audio/071_B.wav
+
+  - type: mushra
+    id: trial_072
+    name: "Trial 72"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/072_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/072_A.wav
+      B: configs/audio/072_B.wav
+
+  - type: mushra
+    id: trial_073
+    name: "Trial 73"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/073_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/073_A.wav
+      B: configs/audio/073_B.wav
+
+  - type: mushra
+    id: trial_074
+    name: "Trial 74"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/074_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/074_A.wav
+      B: configs/audio/074_B.wav
+
+  - type: mushra
+    id: trial_075
+    name: "Trial 75"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/075_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/075_A.wav
+      B: configs/audio/075_B.wav
+
+  - type: mushra
+    id: trial_076
+    name: "Trial 76"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/076_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/076_A.wav
+      B: configs/audio/076_B.wav
+
+  - type: mushra
+    id: trial_077
+    name: "Trial 77"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/077_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/077_A.wav
+      B: configs/audio/077_B.wav
+
+  - type: mushra
+    id: trial_078
+    name: "Trial 78"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/078_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/078_A.wav
+      B: configs/audio/078_B.wav
+
+  - type: mushra
+    id: trial_079
+    name: "Trial 79"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/079_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/079_A.wav
+      B: configs/audio/079_B.wav
+
+  - type: mushra
+    id: trial_080
+    name: "Trial 80"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/080_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/080_A.wav
+      B: configs/audio/080_B.wav
+
+  - type: mushra
+    id: trial_081
+    name: "Trial 81"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/081_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/081_A.wav
+      B: configs/audio/081_B.wav
+
+  - type: mushra
+    id: trial_082
+    name: "Trial 82"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/082_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/082_A.wav
+      B: configs/audio/082_B.wav
+
+  - type: mushra
+    id: trial_083
+    name: "Trial 83"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/083_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/083_A.wav
+      B: configs/audio/083_B.wav
+
+  - type: mushra
+    id: trial_084
+    name: "Trial 84"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/084_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/084_A.wav
+      B: configs/audio/084_B.wav
+
+  - type: mushra
+    id: trial_085
+    name: "Trial 85"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/085_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/085_A.wav
+      B: configs/audio/085_B.wav
+
+  - type: mushra
+    id: trial_086
+    name: "Trial 86"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/086_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/086_A.wav
+      B: configs/audio/086_B.wav
+
+  - type: mushra
+    id: trial_087
+    name: "Trial 87"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/087_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/087_A.wav
+      B: configs/audio/087_B.wav
+
+  - type: mushra
+    id: trial_088
+    name: "Trial 88"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/088_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/088_A.wav
+      B: configs/audio/088_B.wav
+
+  - type: mushra
+    id: trial_089
+    name: "Trial 89"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/089_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/089_A.wav
+      B: configs/audio/089_B.wav
+
+  - type: mushra
+    id: trial_090
+    name: "Trial 90"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/090_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/090_A.wav
+      B: configs/audio/090_B.wav
+
+  - type: mushra
+    id: trial_091
+    name: "Trial 91"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/091_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/091_A.wav
+      B: configs/audio/091_B.wav
+
+  - type: mushra
+    id: trial_092
+    name: "Trial 92"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/092_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/092_A.wav
+      B: configs/audio/092_B.wav
+
+  - type: mushra
+    id: trial_093
+    name: "Trial 93"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/093_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/093_A.wav
+      B: configs/audio/093_B.wav
+
+  - type: mushra
+    id: trial_094
+    name: "Trial 94"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/094_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/094_A.wav
+      B: configs/audio/094_B.wav
+
+  - type: mushra
+    id: trial_095
+    name: "Trial 95"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/095_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/095_A.wav
+      B: configs/audio/095_B.wav
+
+  - type: mushra
+    id: trial_096
+    name: "Trial 96"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/096_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/096_A.wav
+      B: configs/audio/096_B.wav
+
+  - type: mushra
+    id: trial_097
+    name: "Trial 97"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/097_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/097_A.wav
+      B: configs/audio/097_B.wav
+
+  - type: mushra
+    id: trial_098
+    name: "Trial 98"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/098_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/098_A.wav
+      B: configs/audio/098_B.wav
+
+  - type: mushra
+    id: trial_099
+    name: "Trial 99"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/099_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/099_A.wav
+      B: configs/audio/099_B.wav
+
+  - type: mushra
+    id: trial_100
+    name: "Trial 100"
+    content: "Rate how closely A and B match the Reference tone."
+    showWaveform: false
+    showConditionNames: true
+    reference: configs/audio/100_ref.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      A: configs/audio/100_A.wav
+      B: configs/audio/100_B.wav
+
+  - type: finish
+    name: "Thank You"
+    content: "Thank you for completing the ToneCraft listening test! Please fill in the details below before submitting."
+    showResults: false
+    writeResults: true
+    questionnaire:
+      - type: number
+        label: Age
+        min: 0
+        max: 100
+
+      - type: likert
+        label: Do you play electric guitar?
+        response:
+          - "Yes"
+          - "No"
+
+      - type: likert
+        label: Years of experience with electric guitar?
+        response:
+          - "No experience"
+          - "1-2 years"
+          - "3-5 years"
+          - "5-10 years"
+          - "10+ years"
+
+      - type: likert
+        label: How often do you listen to electric guitar music?
+        response:
+          - "Rarely"
+          - "Sometimes"
+          - "Often"
+          - "Daily"
