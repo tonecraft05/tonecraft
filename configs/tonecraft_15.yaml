@@ -11,28 +11,26 @@ pages:
     id: welcome
     name: "Welcome to ToneCraft Listening Test"
     content: >
-      <p>Thank you for participating in this listening test.</p>
+      <p>We invite you to take part in a 8 minute listening experiment to test the results of our model. ToneCraft is an AI driven simulator for guitar tones, which is able to predict underlying parameter settings across multi-effect guitar chains, directly from an input audio sample.</p>
 
-      <p>In each trial, you will hear a <strong>Reference</strong> guitar tone and two
-      audio samples, <strong>A</strong> and <strong>B</strong>.</p>
+      <p>In each trial, you will hear a <strong>Reference</strong> guitar tone and an audio sample <strong>A</strong>, reconstructed with settings predicted by our model.</p>
 
-      <p>Your task is simple:</p>
+      <p>The task is simple:</p>
       <ul>
-        <li>Listen to the <strong>Reference</strong> first.</li>
-        <li>Then listen to <strong>A</strong> and <strong>B</strong>.</li>
-        <li>Move the slider for the sample that sounds <strong>closer</strong> to the Reference <strong>higher</strong> (towards 100).</li>
-        <li>Move the slider for the sample that sounds <strong>further</strong> from the Reference <strong>lower</strong> (towards 0).</li>
+        <li>Listen to the <strong>Reference</strong> first. Then listen to sample <strong>A</strong>.</li>
+        <li>Move the slider to reflect how close <strong>A</strong> sounds to the Reference. <strong>Example:</strong> A sounds very close → A = 90. A sounds quite different → A = 20.</li>
         <li>You may listen to each sample as many times as you like.</li>
+        <li>Data collected will only be used for research purposes.</li>
       </ul>
 
-      <p><strong>Example:</strong> If A sounds very close to the Reference, move A to 90. If B sounds quite different, move B to 20.</p>
-
       <p>Please use <strong>headphones</strong> for the best experience.</p>
+
+      <p>Thank you for your help in advance.</p>
 
   - type: mushra
     id: trial_003
     name: "Trial 3"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -41,12 +39,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/003_A.wav
-      B: configs/audio/003_B.wav
 
   - type: mushra
     id: trial_008
     name: "Trial 8"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -55,12 +52,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/008_A.wav
-      B: configs/audio/008_B.wav
 
   - type: mushra
     id: trial_010
     name: "Trial 10"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -69,12 +65,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/010_A.wav
-      B: configs/audio/010_B.wav
 
   - type: mushra
     id: trial_011
     name: "Trial 11"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -83,12 +78,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/011_A.wav
-      B: configs/audio/011_B.wav
 
   - type: mushra
     id: trial_016
     name: "Trial 16"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -97,12 +91,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/016_A.wav
-      B: configs/audio/016_B.wav
 
   - type: mushra
     id: trial_019
     name: "Trial 19"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -111,12 +104,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/019_A.wav
-      B: configs/audio/019_B.wav
 
   - type: mushra
     id: trial_024
     name: "Trial 24"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -125,12 +117,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/024_A.wav
-      B: configs/audio/024_B.wav
 
   - type: mushra
     id: trial_030
     name: "Trial 30"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -139,12 +130,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/030_A.wav
-      B: configs/audio/030_B.wav
 
   - type: mushra
     id: trial_080
     name: "Trial 80"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -153,12 +143,11 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/080_A.wav
-      B: configs/audio/080_B.wav
 
   - type: mushra
     id: trial_098
     name: "Trial 98"
-    content: "Listen to Reference, then move the sliders: higher = closer to Reference."
+    content: "Listen to Reference, then move the slider: higher = closer to Reference."
     showWaveform: false
     showConditionNames: true
     enableLooping: false
@@ -167,7 +156,6 @@ pages:
     createAnchor70: false
     stimuli:
       A: configs/audio/098_A.wav
-      B: configs/audio/098_B.wav
 
   - type: finish
     name: "Thank You"
